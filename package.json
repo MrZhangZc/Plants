@@ -8,6 +8,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
+  "repository": "git@github.com:MrZhangZc/Plants.git",
   "author": "zzc_imau",
   "license": "MIT",
   "dependencies": {

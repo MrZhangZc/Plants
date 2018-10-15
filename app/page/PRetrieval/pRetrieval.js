@@ -42,7 +42,7 @@ class PRetrieval extends React.Component {
 
     render(){
         return(
-            <div className={`pRetrieval ${this.state.isHidden ? 'is-hidden' : ''}`} >
+            <div className="pRetrieval">
                 <div className={`${this.state.isActive ? 'pRetrieval-1' : 'pRetrieval-2'}`}>
                     <CircleImage textName="1.1"></CircleImage>
                     <CircleImage textName="1.2"></CircleImage>
@@ -52,8 +52,8 @@ class PRetrieval extends React.Component {
                     <div className={`${this.state.isNone ? 'circle-image' : 'is-none'}`}>
                         <div className="circle" onClick={() => this.moreImages()}>更多</div>
                     </div>
-                    <CircleImage textName="1.7"></CircleImage>
-                    <CircleImage textName="1.8"></CircleImage>
+                    <CircleImage textName="1.7" hiddenImg={this.state.isHidden}></CircleImage>
+                    <CircleImage textName="1.8" hiddenImg={this.state.isHidden}></CircleImage>
                 </div>
                 <div className={`${this.state.isActive ? 'pRetrieval-2' : 'pRetrieval-1'}`}>
                     <CircleImage textName="2.1"></CircleImage>

@@ -11,7 +11,7 @@ class CircleImage extends React.Component {
 
     render() {
         return(
-            <div className="circle-image">
+            <div className={`${this.props.hiddenImg ? 'is-hidden' : 'circle-image'}`}>
                 <NavLink to="/hm" className="circle" >
                     {this.props.textName}
                 </NavLink>
