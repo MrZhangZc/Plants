@@ -1,9 +1,9 @@
 import React from 'react'
 import CircleImage from '@components/CircleImage/circle-image'
 
-import './pRetrieval.sass'
+import '../PRetrieval/pRetrieval.sass'
 
-class PRetrieval extends React.Component {
+class P111 extends React.Component {
 
     constructor(props) {
         super(props)
@@ -14,13 +14,13 @@ class PRetrieval extends React.Component {
         }
     }
 
-    moreImages(){
-        if (this.state.isHidden){
+    moreImages() {
+        if (this.state.isHidden) {
             this.setState({
                 isHidden: false,
                 isNone: false
             })
-        }else{
+        } else {
             this.setState({
                 isHidden: true,
                 isNone: true
@@ -40,28 +40,28 @@ class PRetrieval extends React.Component {
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="pRetrieval">
                 <div className={`${this.state.isActive ? 'pRetrieval-1' : 'pRetrieval-2'}`}>
-                    <CircleImage textName="1.1" toPage="PRetrieval/PRetrieval111"></CircleImage>
-                    <CircleImage textName="1.2" toPage="PRetrieval/PRetrieval121"></CircleImage>
-                    <CircleImage textName="1.3" toPage="PRetrieval/PRetrieval131"></CircleImage>
-                    <CircleImage textName="1.4" toPage="PRetrieval/PRetrieval141"></CircleImage>
-                    <CircleImage textName="1.5" toPage="PRetrieval/PRetrieval151"></CircleImage>
+                    <CircleImage textName="1.1.1" toPage="PRetrieval/PRetrieval111/zzca"></CircleImage>
+                    <CircleImage textName="1.1.2" toPage="PRetrieval/PRetrieval121/zzca"></CircleImage>
+                    <CircleImage textName="1.1.3" toPage="PRetrieval/PRetrieval131/zzca"></CircleImage>
+                    <CircleImage textName="1.1.4" toPage="PRetrieval/PRetrieval141/zzca"></CircleImage>
+                    <CircleImage textName="1.1.5" toPage="PRetrieval/PRetrieval151/zzca"></CircleImage>
                     <div className={`${this.state.isNone ? 'circle-image' : 'is-none'}`}>
                         <div className="circle" onClick={() => this.moreImages()}>更多</div>
                     </div>
-                    <CircleImage textName="1.7" toPage="PRetrieval/PRetrieval161" hiddenImg={this.state.isHidden}></CircleImage>
-                    <CircleImage textName="1.8" toPage="PRetrieval/PRetrieval171" hiddenImg={this.state.isHidden}></CircleImage>
+                    <CircleImage textName="1.1.7" toPage="PRetrieval/PRetrieval161" hiddenImg={this.state.isHidden}></CircleImage>
+                    <CircleImage textName="1.1.8" toPage="PRetrieval/PRetrieval171" hiddenImg={this.state.isHidden}></CircleImage>
                 </div>
                 <div className={`${this.state.isActive ? 'pRetrieval-2' : 'pRetrieval-1'}`}>
-                    <CircleImage textName="2.1" toPage="PRetrieval/PRetrieval211"></CircleImage>
-                    <CircleImage textName="2.2" toPage="PRetrieval/PRetrieval221"></CircleImage>
-                    <CircleImage textName="2.3" toPage="PRetrieval/PRetrieval231"></CircleImage>
-                    <CircleImage textName="2.4" toPage="PRetrieval/PRetrieval241"></CircleImage>
-                    <CircleImage textName="2.5" toPage="PRetrieval/PRetrieval251"></CircleImage>
-                    <CircleImage textName="2.6" toPage="PRetrieval/PRetrieval261"></CircleImage>
+                    <CircleImage textName="2.1.1" toPage="PRetrieval/PRetrieval211"></CircleImage>
+                    <CircleImage textName="2.2.1" toPage="PRetrieval/PRetrieval221"></CircleImage>
+                    <CircleImage textName="2.3.1" toPage="PRetrieval/PRetrieval231"></CircleImage>
+                    <CircleImage textName="2.4.1" toPage="PRetrieval/PRetrieval241"></CircleImage>
+                    <CircleImage textName="2.5.1" toPage="PRetrieval/PRetrieval251"></CircleImage>
+                    <CircleImage textName="2.6.1" toPage="PRetrieval/PRetrieval261"></CircleImage>
                 </div>
                 <div className="foot-btn">
                     <div className={`${this.state.isActive ? 'active' : 'no-active'}`} onClick={() => this.active()}>一</div>
@@ -72,4 +72,4 @@ class PRetrieval extends React.Component {
     }
 }
 
-export default PRetrieval
+export default P111
