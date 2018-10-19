@@ -21,6 +21,8 @@ class Retrieval extends Component {
         this.myRef2 = React.createRef()
         this.imgList1 = React.createRef()
         this.imgList2 = React.createRef()
+        this.footBtn1 = React.createRef()
+        this.footBtn2 = React.createRef()
     }
 
     moreImages(){
@@ -51,16 +53,18 @@ class Retrieval extends Component {
         }
     }
 
-    active() {
-        if (this.state.isActive) {
-            this.setState({
-                isActive: false
-            })
-        } else {
-            this.setState({
-                isActive: true
-            })
-        }
+    active1() {
+        this.imgList1.current.className = "Retrieval-1"
+        this.imgList2.current.className = "Retrieval-2"
+        this.footBtn1.current.className = "active"
+        this.footBtn2.current.className = "no-active"
+    }
+
+    active2() {
+        this.imgList1.current.className = "Retrieval-2"
+        this.imgList2.current.className = "Retrieval-1"
+        this.footBtn1.current.className = "no-active"
+        this.footBtn2.current.className = "active"
     }
     
     componentDidMount(){
@@ -79,7 +83,7 @@ class Retrieval extends Component {
     render(){
         return(
             <div className="Retrieval">
-                <div className={`${this.state.isActive ? 'Retrieval-1' : 'Retrieval-2'}`}>
+                <div className='Retrieval-1' ref={this.imgList1}>
                     {
                         this.props.images.all1().map(i => (
                             <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={`${this.state.isHidden ? i.zzc : ''}`}/>
@@ -89,7 +93,7 @@ class Retrieval extends Component {
                         <a className='circle' style={{ backgroundImage: `url(${moreJpg})` }} onClick={() => this.moreImages()}></a>
                     </div>
                 </div>
-                <div className={`${this.state.isActive ? 'Retrieval-2' : 'Retrieval-1'}`}>
+                <div className='Retrieval-2' ref={this.imgList2}>
                     {
                         this.props.images.all2().map(i => (
                             <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={`${this.state.isHidden2 ? i.zzc : ''}`}/>
@@ -100,8 +104,8 @@ class Retrieval extends Component {
                     </div>
                 </div>
                 <div className="foot-btn">
-                    <div className={`${this.state.isActive ? 'active' : 'no-active'}`} onClick={() => this.active()}>一</div>
-                    <div className={`${this.state.isActive ? 'no-active' : 'active'}`} onClick={() => this.active()}>二</div>
+                    <div className="active" ref={this.footBtn1} onClick={() => this.active1()}>一</div>
+                    <div className="no-active" ref={this.footBtn2} onClick={() => this.active2()}>二</div>
                 </div>
             </div>
         )
