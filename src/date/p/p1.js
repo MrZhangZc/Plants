@@ -4,7 +4,7 @@ const ImageAPI = {
         { id: "p/1-2", bgImage: require("@images/2.jpg")},
         { id: "p/1-3", bgImage: require("@images/3.jpg")},
         { id: "p/1-4", bgImage: require("@images/4.jpg")},
-        { id: "p/1-5", bgImage: require("@images/5.jpg")},
+        // { id: "p/1-5", bgImage: require("@images/5.jpg")},
         // { id: "p/1-6", bgImage: require("@images/6.jpg"), zzc: "none"},
         // { id: "p/1-7", bgImage: require("@images/7.jpg"), zzc: "none"}
     ],
@@ -18,7 +18,9 @@ const ImageAPI = {
         { id: "p/2-7", bgImage: require("@images/1.jpg"), zzc: "none"}
     ],
     all1: function () { return this.images1 },
-    all2: function () { return this.images2 }
+    all2: function () { return this.images2 },
+    get1L: function() { return this.images1.length},
+    get2L: function() { return this.images2.length},
 }
 
 export default ImageAPI
