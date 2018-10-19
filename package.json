@@ -12,10 +12,6 @@
   "author": "zzc_imau",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.5.3",
-    "koa-body": "^4.0.4",
-    "koa-router": "^7.4.0",
-    "ramda": "^0.25.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",

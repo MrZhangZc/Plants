@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import CircleImage from '@components/CircleImage/circle-image'
-
+import MoreImage from '../MoreImage/more-image'
 import './Retrieval.sass'
 
 class Retrieval extends Component {
@@ -47,16 +47,18 @@ class Retrieval extends Component {
                 <div className={`${this.state.isActive ? 'Retrieval-1' : 'Retrieval-2'}`}>
                     {
                         this.props.images.all1().map(i => (
-                            <CircleImage textName={i.textName} toPage={`retrieval/${i.id}`}/>
+                            <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={i.zzc}/>
                         ))
                     }
+                    <MoreImage></MoreImage>
                 </div>
                 <div className={`${this.state.isActive ? 'Retrieval-2' : 'Retrieval-1'}`}>
                     {
                         this.props.images.all2().map(i => (
-                            <CircleImage textName={i.textName} toPage={`retrieval/${i.id}`}/>
+                            <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={i.zzc}/>
                         ))
                     }
+                    <MoreImage></MoreImage>
                 </div>
                 <div className="foot-btn">
                     <div className={`${this.state.isActive ? 'active' : 'no-active'}`} onClick={() => this.active()}>一</div>
