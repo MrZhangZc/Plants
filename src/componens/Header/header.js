@@ -1,14 +1,67 @@
 import React, { Component } from 'react'
-
+import { Popover, NavBar, Icon } from 'antd-mobile';
+import { NavLink } from 'react-router-dom'
 import './header.sass'
 
+const Item = Popover.Item;
+
+const myImg = src => <img src={`https://gw.alipayobjects.com/zos/rmsportal/${src}.svg`} className="am-icon am-icon-xs" alt="" />;
+
 class Header extends Component {
-    render(){
-        return(
-            <div className="header">
+    constructor(props) {
+        super(props)
+        this.state = {
+            visible: false
+        }
+    }
+    onSelect(opt) {
+        this.setState({
+            visible: false,
+        });
+    };
+
+    handleVisibleChange(visible) {
+        this.setState({
+            visible,
+        });
+    };
+    render() {
+        return (<div>
+            <NavBar
+                mode="light"
+                rightContent={
+                    <Popover mask
+                        overlayClassName="fortest"
+                        overlayStyle={{ color: 'currentColor' }}
+                        visible={this.state.visible}
+                        overlay={[
+                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
+                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
+                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
+                        ]}
+                        align={{
+                            overflow: { adjustY: 0, adjustX: 0 },
+                            offset: [-10, 0],
+                        }}
+                        onVisibleChange={() => this.handleVisibleChange()}
+                        onSelect={() => this.onSelect(Popover.overlay)}
+                    >
+                        <div style={{
+                            height: '100%',
+                            padding: '0 15px',
+                            marginRight: '-15px',
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}
+                        >
+                            <Icon type="ellipsis" />
+                        </div>
+                    </Popover>
+                }
+            >
                 植物检索
-            </div>
-        )
+      </NavBar>
+        </div>);
     }
 }
 
