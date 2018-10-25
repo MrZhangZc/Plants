@@ -2,8 +2,6 @@ const path = require("path")
 const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const PurifyCssWebpack = require('purifycss-webpack')
-const glob = require('glob')
 
 const r = url => path.resolve(__dirname, url)
 
@@ -67,10 +65,6 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
         new ExtractTextPlugin('css/index.css'),
-        new PurifyCssWebpack({
-            paths: glob.sync(path.join(__dirname, 'src/*.html'))
-        })
-
     ],
     devServer: {
         host: '0.0.0.0',

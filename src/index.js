@@ -4,6 +4,7 @@ import { Route, HashRouter, history, Switch} from 'react-router-dom';
 
 import Home from '@page/Home/home'
 import MainRoute from '@components/MainRoute/main-route'
+import PickerPlant from './page/PickerPlant/picker-plant'
 
 import './public/sass/base.sass'
 

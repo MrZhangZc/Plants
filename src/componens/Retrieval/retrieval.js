@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
 import CircleImage from '@components/CircleImage/circle-image'
-import MoreImage from '../MoreImage/more-image'
-import './Retrieval.sass'
 
+import './Retrieval.sass'
 import moreJpg from '@images/more.jpg'
 
 class Retrieval extends Component {

@@ -22,5 +22,5 @@ new WebpackDevSerer(webpack(config), {
         console.log(err)
     }
 
-    console.log('成功')
+    console.log('项目成功启动在8080端口')
 })

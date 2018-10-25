@@ -12,6 +12,10 @@
   "author": "zzc_imau",
   "license": "MIT",
   "dependencies": {
+    "ant-mobile": "^0.0.0",
+    "antd-mobile": "^2.2.5",
+    "array-tree-filter": "^2.1.0",
+    "rc-form": "^2.2.6",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",
@@ -32,7 +36,6 @@
     "node-sass": "^4.9.3",
     "postcss-loader": "^3.0.0",
     "purify-css": "^1.2.5",
-    "purifycss-webpack": "^0.7.0",
     "sass": "^1.14.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
