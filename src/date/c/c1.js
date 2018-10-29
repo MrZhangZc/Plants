@@ -5,7 +5,7 @@ const ImageAPI = {
         { id: "c/1-3", textName: "1-3" },
         { id: "c/1-4", textName: "1-4" },
         { id: "c/1-5", textName: "1-5" },
-        { id: "c/1-6", textName: "1-6" },
+        { id: "c/1-6", textName: "1-6" }, 
         { id: "c/1-7", textName: "1-7" }
     ],
     images2: [

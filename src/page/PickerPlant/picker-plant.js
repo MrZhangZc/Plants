@@ -8,6 +8,8 @@ import { Toast, WingBlank, Button } from 'antd-mobile';
 
 import { district, provinceLite } from './data';
 
+import './picker-plant.sass'
+
 
 class Test extends React.Component {
     constructor(props) {
@@ -16,7 +18,9 @@ class Test extends React.Component {
             data: [],
             pickerValue: [],
             visible: false,
-            
+            ke:'',
+            zhong:'',
+            shu: ''
         }
     }
     showToast() {
@@ -37,15 +41,14 @@ class Test extends React.Component {
         }
         const treeChildren = arrayTreeFilter(district, (c, level) => c.value === value[level]);
         return treeChildren.map(v => v.label).join(',');
-        console.log(this.state.pickerValue)
     }
-    componentDidMount(){
-        const value3 = this.state.pickerValue;
-        if (!value3) {
-            return '';
-        }
-        const treeChildren2 = arrayTreeFilter(district, (c, level) => c.value3 === value3[level]);
-        console.log(treeChildren2.map(v => v.label).join(','))
+    componentDidUpdate(){
+        // const value4 = this.state.pickerValue;
+        // const treeChildren2 = arrayTreeFilter(district, (c, level) => {
+        //     console.log(c)
+        //     c.value4 === value4[level]
+        // });
+        // console.log(treeChildren2.map(v => v.label))
     }
 
     render() {
@@ -66,15 +69,17 @@ class Test extends React.Component {
                         </List.Item>
                     </Picker>
                 </List>
-
+ 
                 <div>{this.state.pickerValue}</div>
                 <WingBlank>
                     <WhiteSpace />
-                    <Button href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`} onClick={() => {
+                    <Button className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${this.state.ke}`}</Button>
+                    <Button className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${this.state.zhong}`}</Button>
+                    <Button href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : `/#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`}`} onClick={() => {
                         if (this.state.pickerValue.toString() === '') {
                                 Toast.info('请至少选择一项', 1)
                             }
-                         }}>开始检索</Button>
+                    }}>{`${`${this.state.pickerValue.length === 0 ? '开始检索' : `查看${this.state.shu}` }`}`}</Button>
                     <WhiteSpace />
                 </WingBlank>
             </div>

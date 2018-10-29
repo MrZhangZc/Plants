@@ -5,26 +5,17 @@ import './header.sass'
 
 const Item = Popover.Item;
 
-const myImg = src => <img src={`https://gw.alipayobjects.com/zos/rmsportal/${src}.svg`} className="am-icon am-icon-xs" alt="" />;
+//const myImg = src => <img src={`https://gw.alipayobjects.com/zos/rmsportal/${src}.svg`} className="am-icon am-icon-xs" alt="" />;
 
 class Header extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            visible: false
+            visible: false,
+            selected: '',
         }
     }
-    onSelect(opt) {
-        this.setState({
-            visible: false,
-        });
-    };
-
-    handleVisibleChange(visible) {
-        this.setState({
-            visible,
-        });
-    };
+    
     render() {
         return (<div>
             <NavBar
@@ -35,16 +26,14 @@ class Header extends Component {
                         overlayStyle={{ color: 'currentColor' }}
                         visible={this.state.visible}
                         overlay={[
-                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
-                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
-                            (<Item ><NavLink className="help" to="/PRetrieval">My Qrcode</NavLink></Item>),
+                            (<Item ><NavLink className="help" to="/PRetrieval">简介</NavLink></Item>),
+                            (<Item ><NavLink className="help" to="/PRetrieval">简介</NavLink></Item>),
+                            (<Item ><NavLink className="help" to="/PRetrieval">简介</NavLink></Item>),
                         ]}
                         align={{
                             overflow: { adjustY: 0, adjustX: 0 },
                             offset: [-10, 0],
                         }}
-                        onVisibleChange={() => this.handleVisibleChange()}
-                        onSelect={() => this.onSelect(Popover.overlay)}
                     >
                         <div style={{
                             height: '100%',
