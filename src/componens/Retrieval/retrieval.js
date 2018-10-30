@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import CircleImage from '@components/CircleImage/circle-image'
+import Header from '@components/ContentHeader/content-header'
 
 import './Retrieval.sass'
 import moreJpg from '@images/more.jpg'
@@ -80,6 +81,7 @@ class Retrieval extends Component {
         return(
             <div className="Retrieval">
                 <div className='Retrieval-1' ref={this.imgList1}>
+                    <Header title="张智超张智超张智超"></Header>
                     {
                         this.props.images.all1().map(i => (
                             <CircleImage imgPath={`url(${i.bgImage})`} noLook={`${this.state.isHidden ? i.zzc : ''}`}/>
@@ -90,6 +92,7 @@ class Retrieval extends Component {
                     </div>
                 </div>
                 <div className='Retrieval-2' ref={this.imgList2}>
+                    <Header title="张智超张智超张智超"></Header>
                     {
                         this.props.images.all2().map(i => (
                             <CircleImage imgPath={`url(${i.bgImage})`} noLook={`${this.state.isHidden2 ? i.zzc : ''}`}/>

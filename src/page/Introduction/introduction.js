@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import './introduction.sass'
 
 import Header from '@components/ContentHeader/content-header'
 import inimg from '@images/img.jpg'
 
-class Introduction extends React.Component{
+class Introduction extends Component{
     render(){
         return(
             <div className="introduction">

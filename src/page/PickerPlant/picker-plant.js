@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import 'antd-mobile/dist/antd-mobile.css'
 import { Picker, List, WhiteSpace, Toast, WingBlank, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
@@ -8,11 +8,10 @@ import Header from '@components/ContentHeader/content-header'
 import API from '@date/plant'
 import { district } from './data';
 
-
 import './picker-plant.sass'
 
 
-class Test extends React.Component {
+class Test extends Component {
     constructor(props) {
         super(props)
         this.state = {
