@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom'
 
 import './circle-image.sass'
 
-import Aimg from '@images/1.jpg'
-
 class CircleImage extends Component {
 
     constructor(props) {

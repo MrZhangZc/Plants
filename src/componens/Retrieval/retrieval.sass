@@ -11,10 +11,12 @@ $bgc: #0088CC
 .foot-btn
     width: 100%
     display: flex
+    align-items: flex-end
     position: fixed
     bottom: 0
-    .no-active
-        width: 50%
+    background-color: #fff
+    .btn
+        width: 40%
         height: 3em
         line-height: 3em
         text-align: center
@@ -22,17 +24,21 @@ $bgc: #0088CC
         box-sizing: border-box
         border-radius: 5px
         background: #ffffff
-        color: $bgc
+        color: $bgc 
     .active
-        width: 50%
-        height: 3em
-        line-height: 3em
+        background: $bgc
+        color: #ffffff
+    .retrieval
+        width: 20%
+        height: 5em
+        line-height: 5em
         text-align: center
         border: 1px solid #dddddd
         box-sizing: border-box
         border-radius: 5px
-        background: $bgc
+        background: #764ABC
         color: #ffffff
+        border-radius: 50%
 .circle-image
     display: inline-block
     width: 50%

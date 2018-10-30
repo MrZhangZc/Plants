@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import CircleImage from '@components/CircleImage/circle-image'
 
@@ -15,6 +16,7 @@ class Retrieval extends Component {
             isHidden2: true,
             isNone: true,
             isNone2: true,
+            click2: false,
         }
         this.myRef = React.createRef()
         this.myRef2 = React.createRef()
@@ -30,11 +32,6 @@ class Retrieval extends Component {
                 isHidden: false,
                 isNone: false
             })
-        }else{
-            this.setState({
-                isHidden: true,
-                isNone: true
-            })
         }
     }
 
@@ -44,26 +41,27 @@ class Retrieval extends Component {
                 isHidden2: false,
                 isNone2: false
             })
-        } else {
-            this.setState({
-                isHidden2: true,
-                isNone2: true
-            })
         }
     }
 
     active1() {
         this.imgList1.current.className = "Retrieval-1"
-        this.imgList2.current.className = "Retrieval-2"
-        this.footBtn1.current.className = "active"
-        this.footBtn2.current.className = "no-active"
+        this.imgList2.current.className = "is-none"
+        this.footBtn1.current.className = "btn active"
+        this.footBtn2.current.className = "btn"
+        this.setState({
+            click2: false
+        })
     }
 
     active2() {
-        this.imgList1.current.className = "Retrieval-2"
+        this.imgList1.current.className = "is-none"
         this.imgList2.current.className = "Retrieval-1"
-        this.footBtn1.current.className = "no-active"
-        this.footBtn2.current.className = "active"
+        this.footBtn1.current.className = "btn"
+        this.footBtn2.current.className = "btn active"
+        this.setState({
+            click2: true
+        })
     }
     
     componentDidMount(){
@@ -76,7 +74,6 @@ class Retrieval extends Component {
             let more1Dom = this.myRef2.current
             more1Dom.parentNode.removeChild(more1Dom)
         }
-        
     }
 
     render(){
@@ -85,7 +82,7 @@ class Retrieval extends Component {
                 <div className='Retrieval-1' ref={this.imgList1}>
                     {
                         this.props.images.all1().map(i => (
-                            <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={`${this.state.isHidden ? i.zzc : ''}`}/>
+                            <CircleImage imgPath={`url(${i.bgImage})`} noLook={`${this.state.isHidden ? i.zzc : ''}`}/>
                         ))
                     }
                     <div className={`${this.state.isNone ? 'circle-image' : 'is-none'}`} ref={this.myRef}>
@@ -95,7 +92,7 @@ class Retrieval extends Component {
                 <div className='Retrieval-2' ref={this.imgList2}>
                     {
                         this.props.images.all2().map(i => (
-                            <CircleImage imgPath={`url(${i.bgImage})`} toPage={`retrieval/${i.id}`} noLook={`${this.state.isHidden2 ? i.zzc : ''}`}/>
+                            <CircleImage imgPath={`url(${i.bgImage})`} noLook={`${this.state.isHidden2 ? i.zzc : ''}`}/>
                         ))
                     }
                     <div className={`${this.state.isNone2 ? 'circle-image' : 'is-none'}`} ref={this.myRef2}>
@@ -103,8 +100,9 @@ class Retrieval extends Component {
                     </div>
                 </div>
                 <div className="foot-btn">
-                    <div className="active" ref={this.footBtn1} onClick={() => this.active1()}>一</div>
-                    <div className="no-active" ref={this.footBtn2} onClick={() => this.active2()}>二</div>
+                    <div className="btn active" ref={this.footBtn1} onClick={() => this.active1()}>一</div>
+                    <NavLink to={`${this.state.click2 ? `/retrieval/${this.props.pc}/${this.props.hm2}` : `/retrieval/${this.props.pc}/${this.props.hm1}`}`} className="retrieval" id={`${this.state.click2 ? '2' : '1'}`}>检索</NavLink>
+                    <div className="btn" ref={this.footBtn2} onClick={() => this.active2()}>二</div>
                 </div>
             </div>
         )

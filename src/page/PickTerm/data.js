@@ -1,15 +1,36 @@
 
 export const district = [
         {
-        "value": "0100",
-        "label": "柏科",
+        "value": "5000",
+        "label": "基本术语",
         "children": [{
-            "value": "0110",
-            "label": "圆柏属",
-            "children": [{
-                "value": "0111",
-                "label": "圆柏",
-                "children": []
+                "value": "5010",
+                "label": "按植物性状",
+                "children": [{
+                        "value": "5011",
+                        "label": "木本植物",
+                    },{
+                        "value": "5012",
+                        "label": "草本植物",
+                    },{
+                        "value": "5013",
+                        "label": "藤本植物",
+                    }]
+                },{
+                "value": "5020",
+                "label": "按植物对水分的需求量和依赖程度",
+                "children": [{
+                    "value": "5021",
+                    "label": "旱生植物",
+                }, {
+                    "value": "5022",
+                    "label": "中生植物",
+                }, {
+                    "value": "5023",
+                    "label": "湿生植物",
+                },{
+                    "value": "5024",
+                    "label": "水生植物",
                 }]
             }]
         }, 
@@ -287,44 +308,4 @@ export const district = [
                 "children": []
             }]
         }]
-        }, {
-        "value": "1000",
-        "label": "十字花科",
-        "children": [{
-            "value": "1010",
-            "label": "独行菜属",
-            "children": [{
-                "value": "1011",
-                "label": "宽叶独行菜",
-                "children": []
-            },{
-                "value": "1012",
-                "label": "独行菜",
-                "children": []
-            }]
-        }, {
-            "value": "1020",
-            "label": "花旗杆属",
-            "children": [{
-                "value": "1021",
-                "label": "小花花旗杆",
-                "children": []
-            }]
-        },{
-            "value": "1020",
-            "label": "花旗杆属",
-            "children": [{
-                "value": "1021",
-                "label": "小花花旗杆",
-                "children": []
-            }]
-        },{
-            "value": "1040",
-            "label": "大蒜芥属",
-            "children": [{
-                "value": "1041",
-                "label": "垂果大蒜芥",
-                "children": []
-            }]
-        }]
-    }];
+        }];

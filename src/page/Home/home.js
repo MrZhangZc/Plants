@@ -10,8 +10,8 @@ class Home extends Component {
                 <Header/>
                 <HomeNav navTitle="专业检索" to="/PRetrieval" />
                 <HomeNav navTitle="普通检索" to="/CRetrieval" />
-                <HomeNav navTitle="张智超" to="/plant" />
-                <HomeNav navTitle="张智超" to="/zzchm" />
+                <HomeNav navTitle="植物查询" to="/plant" />
+                <HomeNav navTitle="形态术语" to="/zzchm" />
             </div>
         )
     }
