@@ -56,7 +56,7 @@ class Retrieval extends Component {
                 <Header title="专业检索"></Header>
                 <div className='Retrieval-1' ref={this.imgList1}>
                     <ContentWords content={this.state.leftObj.describe} />
-                    <NavLink to={`/PRetrieval/${this.state.leftObj.childrenID}`} className="retrieval">检索</NavLink>
+                    <NavLink to={`${this.state.leftObj.isFinish ? `/plant/${this.state.leftObj.childrenID}` : `/${this.props.pc}/${this.state.leftObj.childrenID}`}` } className="retrieval">检索</NavLink>
                     {
                         this.state.leftObj.images.map(i => (
                             <CircleImage imgPath={`url(${i})`} />
@@ -66,7 +66,7 @@ class Retrieval extends Component {
                 </div>
                 <div className='Retrieval-2' ref={this.imgList2}>
                     <ContentWords content={this.state.RightObj.describe} />
-                    <NavLink to={`/PRetrieval/${this.state.RightObj.childrenID}`} className="retrieval">检索</NavLink>
+                    <NavLink to={`${this.state.RightObj.isFinish ? `/plant/${this.state.leftObj.childrenID}` : `/${this.props.pc}/${this.state.RightObj.childrenID}`}`} className="retrieval">检索</NavLink>
                     {
                         this.state.RightObj.images.map(i => (
                             <CircleImage imgPath={`url(${i})`} />
