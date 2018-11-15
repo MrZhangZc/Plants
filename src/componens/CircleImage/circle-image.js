@@ -11,7 +11,7 @@ class CircleImage extends Component {
 
     render() {
         return(
-            <div className={`${this.props.hiddenImg ? 'is-hidden' : 'circle-image'}`} style={{ display: this.props.noLook}}>
+            <div className='circle-image' style={{ display: this.props.noLook}}>
                 <NavLink to={`/${this.props.toPage}`} className="circle" style={{ backgroundImage: this.props.imgPath }} />
             </div>
         )

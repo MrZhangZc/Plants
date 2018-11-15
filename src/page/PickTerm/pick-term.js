@@ -37,7 +37,7 @@ class Test extends React.Component {
                         onDismiss={() => this.setState({ visible: false })}
                     >
                         <List.Item onClick={() => this.setState({ visible: true })}>
-                            专业检索
+                            形态术语
                         </List.Item>
                     </Picker>
                 </List>
