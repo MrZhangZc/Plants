@@ -8,7 +8,7 @@ class Home extends Component {
         return(
             <div className="container-home">
                 <Header/>
-                <HomeNav navTitle="专业检索" to="/PRetrieval" />
+                <HomeNav navTitle="专业检索" to="/PRetrieval/001" />
                 <HomeNav navTitle="普通检索" to="/CRetrieval" />
                 <HomeNav navTitle="植物查询" to="/plant" />
                 <HomeNav navTitle="形态术语" to="/zzchm" />

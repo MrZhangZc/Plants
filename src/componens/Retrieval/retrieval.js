@@ -18,6 +18,9 @@ class Retrieval extends Component {
             isNone: true,
             isNone2: true,
             click2: false,
+            leftObj:{},
+            RightObj:{},
+            currentURL: ''
         }
         this.myRef = React.createRef()
         this.myRef2 = React.createRef()
@@ -52,19 +55,21 @@ class Retrieval extends Component {
             <div className="Retrieval">
                 <Header title="专业检索"></Header>
                 <div className='Retrieval-1' ref={this.imgList1}>
-                    <ContentWords content="一顿介绍"></ContentWords>
+                    <ContentWords content={this.state.leftObj.describe} />
+                    <NavLink to={`/PRetrieval/${this.state.leftObj.childrenID}`} className="retrieval">检索</NavLink>
                     {
-                        this.props.images.all1().map(i => (
-                            <CircleImage imgPath={`url(${i.bgImage})`}/>
+                        this.state.leftObj.images.map(i => (
+                            <CircleImage imgPath={`url(${i})`} />
                         ))
                     }
-                    {/* <NavLink to={`${this.state.click2 ? `/retrieval/${this.props.pc}/${this.props.hm2}` : `/retrieval/${this.props.pc}/${this.props.hm1}`}`} className="retrieval" id={`${this.state.click2 ? '2' : '1'}`}>检索</NavLink> */}
+                    
                 </div>
                 <div className='Retrieval-2' ref={this.imgList2}>
-                    <ContentWords content="一顿介绍"></ContentWords>
+                    <ContentWords content={this.state.RightObj.describe} />
+                    <NavLink to={`/PRetrieval/${this.state.RightObj.childrenID}`} className="retrieval">检索</NavLink>
                     {
-                        this.props.images.all2().map(i => (
-                            <CircleImage imgPath={`url(${i.bgImage})`}/>
+                        this.state.RightObj.images.map(i => (
+                            <CircleImage imgPath={`url(${i})`} />
                         ))
                     }
                 </div>
@@ -74,6 +79,36 @@ class Retrieval extends Component {
                 </div>
             </div>
         )
+    }
+
+    componentWillMount() {
+        let arr = this.props.api.getAllID().map(i => {
+            if (i === document.location.hash.split('/')[2]) {
+                let LObj = this.props.api.getLeftObjByID(i)
+                let RObj = this.props.api.getRightObjByID(i)
+                this.setState({
+                    leftObj: LObj,
+                    RightObj: RObj,
+                    currentURL: document.location.hash.split('/')[2]
+                })
+            }
+        })
+    }
+
+    componentDidUpdate(){
+        if(this.state.currentURL !== document.location.hash.split('/')[2]){
+            let arr = this.props.api.getAllID().map(i => {
+                if (i === document.location.hash.split('/')[2]) {
+                    let LObj = this.props.api.getLeftObjByID(i)
+                    let RObj = this.props.api.getRightObjByID(i)
+                    this.setState({
+                        leftObj: LObj,
+                        RightObj: RObj,
+                        currentURL: document.location.hash.split('/')[2]
+                    })
+                }
+            })
+        }
     }
 }
 
