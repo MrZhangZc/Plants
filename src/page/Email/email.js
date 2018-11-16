@@ -18,22 +18,22 @@ class Email extends Component {
         super(props)
         this.state = { value: '' }
     }
-    handleChange(event) {
-　　　　this.setState({ value: event.target.value }); //用户输入值是改变状态里面存放的值
-    }
+//     handleChange(event) {
+// 　　　　this.setState({ value: event.target.value }); //用户输入值是改变状态里面存放的值
+//     }
 
-    handleSubmit(event) {
-　　　　event.preventDefault(); //阻止表单默认提交
-        console.log(this.props.form)
-    }
+//     handleSubmit(event) {
+// 　　　　//event.preventDefault(); //阻止表单默认提交
+//         console.log(this.props.form)
+//     }
     render() {
         return (
             <div className="introduction">
                 <Header title="我要提议" />
-                <form action="#" method='post' onSubmit={this.handleSubmit.bind(this)}>
+                {/* <form action="#" method='post' onSubmit={this.handleSubmit.bind(this)}>
                     <input type='text' value={this.state.value} onChange={this.handleChange.bind(this)}/>
                     <input type='submit'/>
-　　　　　　　　</form>
+　　　　　　　　</form> */}
             </div>
         )
     }
@@ -74,7 +74,7 @@ class Email extends Component {
         //     })
         // }
         // sendEmail()
-        console.log('1111',this.state.content)
+        //console.log('1111',this.state.content)
     }
 }
 
