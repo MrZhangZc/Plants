@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 0.1.1
+ * Description: 提意见页面
+**/
 import React, { Component } from 'react'
 import { List, InputItem } from 'antd-mobile';
 

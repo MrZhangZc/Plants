@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.0
+ * Description: data 普通检索
+**/
 const cAPI = {
     one: {
         id: '001',

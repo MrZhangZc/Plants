@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.2
+ * Description: 具体植物页面
+**/
 import React, { Component } from 'react'
 import API from '@date/plant'
 import Header from '@components/ContentHeader/content-header'

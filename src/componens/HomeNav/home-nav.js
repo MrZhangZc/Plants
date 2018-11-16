@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.5
+ * Description: 首页按钮组件
+**/
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 

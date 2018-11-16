@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 2.1.4
+ * Description: 检索组件
+**/
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button, WhiteSpace, WingBlank } from 'antd-mobile';

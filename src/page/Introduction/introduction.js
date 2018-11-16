@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.1
+ * Description: 介绍页面
+**/
 import React, { Component } from 'react'
 
 import './introduction.sass'

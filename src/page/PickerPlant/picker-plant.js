@@ -1,3 +1,10 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.2
+ * Description: picker页面(植物查询)
+**/
 import React, { Component } from 'react'
 import 'antd-mobile/dist/antd-mobile.css'
 import { Picker, List, WhiteSpace, Toast, WingBlank, Button } from 'antd-mobile';
