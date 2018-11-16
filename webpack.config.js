@@ -78,7 +78,10 @@ module.exports = {
         alias: {
             '@components': path.resolve(__dirname, './src/componens'),
             '@images': path.resolve(__dirname, './src/public/images'),
+            '@imagesp': path.resolve(__dirname, './src/public/images/PRetrieval'),
+            '@imagesc': path.resolve(__dirname, './src/public/images/CRetrieval'),
             '@fonts': path.resolve(__dirname, './src/public/fonts'),
+            '@sass': path.resolve(__dirname, './src/public/sass'),
             '@datep': path.resolve(__dirname, './src/date/p'),
             '@datec': path.resolve(__dirname, './src/date/c'),
             '@date': path.resolve(__dirname, './src/date'),

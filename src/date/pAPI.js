@@ -1,8 +1,8 @@
 const pAPI = {
     one:{
         id:'001',
-        L: { childrenID: '0100', isFinish: true, describe: '胚珠裸露，无真正的花和果实', images: [require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg")], },
-        R: { childrenID: '002', isFinish: false, describe: '胚珠被子房包被，具有真正的花和果实', images: [require("@images/2.jpg"), require("@images/2.jpg"), require("@images/2.jpg"), require("@images/2.jpg"), require("@images/2.jpg")], },
+        L: { childrenID: '0100', isFinish: true, describe: '胚珠裸露，无真正的花和果实', images: [require("@imagesp/1yuanbai/1.jpg"), require("@imagesp/1yuanbai/2.jpg"), require("@imagesp/1yuanbai/3.jpg"), require("@imagesp/1yuanbai/4.jpg"), require("@imagesp/1yuanbai/5.jpg"), require("@imagesp/1yuanbai/6.jpg")], },
+        R: { childrenID: '002', isFinish: false, describe: '胚珠被子房包被，具有真正的花和果实', images: [require("@imagesp/2zhuantianyang/1.jpg"), require("@imagesp/2zhuantianyang/2.jpg"), require("@imagesp/2zhuantianyang/3.png"), require("@imagesp/2zhuantianyang/4.jpg"), require("@imagesp/2zhuantianyang/5.jpg"), require("@imagesp/2zhuantianyang/6.jpg")], },
     },
     two:{
         id:'002',
@@ -66,7 +66,7 @@ const pAPI = {
     },
     fourteen: {
         id: '014',
-        L: { childrenID: '0100', isFinish: true, describe: '花排成头状或密穗状；羽状复叶', images: [require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg")], },
+        L: { childrenID: '0100', isFinish: true, describe: '花排成头状或密穗状；羽状复叶', images: [require("@imagesp/1yuanbai/1.jpg"), require("@imagesp/1yuanbai/2.jpg"), require("@imagesp/1yuanbai/3.jpg"), require("@imagesp/1yuanbai/4.jpg"), require("@imagesp/1yuanbai/5.jpg"), require("@imagesp/1yuanbai/6.jpg")], },
         R: { childrenID: '1100', isFinish: true, describe: '花单生叶腋；单叶', images: [require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg"), require("@images/1.jpg")], },
     },
     fifteen: {

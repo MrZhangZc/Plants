@@ -1,3 +1,11 @@
+/**
+ * Copyright(C),blog.lihailezzc.com
+ * Author: jiayouzzc@126.com
+ * Date: 2018.11.2
+ * Version: 1.0.3
+ * Description: 圆形图片组件
+**/
+
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 

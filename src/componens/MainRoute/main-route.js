@@ -5,15 +5,18 @@ import Retrieval from '@components/Retrieval/retrieval'
 import PickerPlant from '@page/PickerPlant/picker-plant'
 import PickContent from '@page/PickContent/pick-content'
 import Introduction from '@page/Introduction/introduction'
+import Email from '@page/Email/email'
 import PickTerm from '@page/PickTerm/pick-term'
 
 import pAPI from '@date/pAPI'
+import cAPI from '@date/cAPI'
 
 const MainRoute = () => (
     <Switch>
+        <Route exact path="/email" component={Email} />
         <Route exact path="/introduction" component={Introduction} />
         <Route path="/PRetrieval/:id" render={() => <Retrieval api={pAPI} pc="PRetrieval"/>} />
-        <Route path="/CRetrieval/:id" render={() => <Retrieval api={pAPI} pc="CRetrieval" />} />
+        <Route path="/CRetrieval/:id" render={() => <Retrieval api={cAPI} pc="CRetrieval" />} />
         <Route exact path="/plant" component={PickerPlant} />
         <Route exact path="/zzchm" component={PickTerm} />
         <Route path="/plant/:id" component={PickContent} />
