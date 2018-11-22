@@ -1,8 +1,8 @@
 /**
  * Copyright(C),blog.lihailezzc.com
  * Author: jiayouzzc@126.com
- * Date: 2018.11.2
- * Version: 1.0.5
+ * Date: 2018.11.22
+ * Version: 1.1.0
  * Description: react-router组件 
 **/
 import React from 'react'
@@ -11,6 +11,7 @@ import { Switch, Route } from 'react-router-dom'
 import Retrieval from '@components/Retrieval/retrieval'
 import PickerPlant from '@page/PickerPlant/picker-plant'
 import PickContent from '@page/PickContent/pick-content'
+import ImageDetails from '@page/ImageDetails/imaeg-details'
 import Introduction from '@page/Introduction/introduction'
 import Email from '@page/Email/email'
 import PickTerm from '@page/PickTerm/pick-term'
@@ -27,6 +28,7 @@ const MainRoute = () => (
         <Route exact path="/plant" component={PickerPlant} />
         <Route exact path="/zzchm" component={PickTerm} />
         <Route path="/plant/:id" component={PickContent} />
+        <Route path="/images/:id" component={ImageDetails} />
     </Switch>
 )
 

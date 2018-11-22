@@ -1,8 +1,8 @@
 /**
  * Copyright(C),blog.lihailezzc.com
  * Author: jiayouzzc@126.com
- * Date: 2018.11.2
- * Version: 1.0.3
+ * Date: 2018.11.22
+ * Version: 1.0.4
  * Description: 圆形图片组件
 **/
 
@@ -20,7 +20,7 @@ class CircleImage extends Component {
     render() {
         return(
             <div className='circle-image'>
-                <NavLink to={`/${this.props.toPage}`} className="circle" style={{ backgroundImage: this.props.imgPath }} />
+                <NavLink to={`${this.props.toPage}`} className="circle" style={{ backgroundImage: this.props.imgPath }} />
             </div>
         )
     }

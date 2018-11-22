@@ -2,7 +2,7 @@
  * Copyright(C),blog.lihailezzc.com
  * Author: jiayouzzc@126.com
  * Date: 2018.11.2
- * Version: 2.1.4
+ * Version: 2.2.0
  * Description: 检索组件
 **/
 import React, { Component } from 'react'
@@ -66,7 +66,7 @@ class Retrieval extends Component {
                     <NavLink to={`${this.state.leftObj.isFinish ? `/plant/${this.state.leftObj.childrenID}` : `/${this.props.pc}/${this.state.leftObj.childrenID}`}` } className="retrieval">检索</NavLink>
                     {
                         this.state.leftObj.images.map(i => (
-                            <CircleImage imgPath={`url(${i})`} />
+                            <CircleImage toPage= {`${i}`} imgPath={`url(${i})`} />
                         ))
                     }
                     

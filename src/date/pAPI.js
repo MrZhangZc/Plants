@@ -1,14 +1,14 @@
 /**
  * Copyright(C),blog.lihailezzc.com
  * Author: jiayouzzc@126.com
- * Date: 2018.11.2
- * Version: 3.2.6
+ * Date: 2018.11.22
+ * Version: 4.0.0
  * Description: data 专业检索
 **/
 const pAPI = {
     one:{
         id:'001',
-        L: { childrenID: '0100', isFinish: true, describe: '胚珠裸露，无真正的花和果实', images: [require("@imagesp/1yuanbai/1.jpg"), require("@imagesp/1yuanbai/2.jpg"), require("@imagesp/1yuanbai/3.jpg"), require("@imagesp/1yuanbai/4.jpg"), require("@imagesp/1yuanbai/5.jpg"), require("@imagesp/1yuanbai/6.jpg")], },
+        L: { childrenID: '0100', isFinish: false, describe: '胚珠裸露，无真正的花和果实', images: [require("@imagesp/1yuanbai/1.jpg"), require("@imagesp/1yuanbai/2.jpg"), require("@imagesp/1yuanbai/3.jpg"), require("@imagesp/1yuanbai/4.jpg"), require("@imagesp/1yuanbai/5.jpg"), require("@imagesp/1yuanbai/6.jpg")], },
         R: { childrenID: '002', isFinish: false, describe: '胚珠被子房包被，具有真正的花和果实', images: [require("@imagesp/2zhuantianyang/1.jpg"), require("@imagesp/2zhuantianyang/2.jpg"), require("@imagesp/2zhuantianyang/3.png"), require("@imagesp/2zhuantianyang/4.jpg"), require("@imagesp/2zhuantianyang/5.jpg"), require("@imagesp/2zhuantianyang/6.jpg")], },
     },
     two:{

@@ -35,7 +35,7 @@ module.exports = {
             }, 
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                loader: `url-loader?limit=500&name=./src/public/images/[name].[ext]?[hash:8]`
+                loader: `url-loader?limit=500&name=images/[hash:8].[name].[ext]`
             },
             {
                 test: /\.css$/,

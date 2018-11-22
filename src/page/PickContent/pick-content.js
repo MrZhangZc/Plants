@@ -1,8 +1,8 @@
 /**
  * Copyright(C),blog.lihailezzc.com
  * Author: jiayouzzc@126.com
- * Date: 2018.11.2
- * Version: 1.0.2
+ * Date: 2018.11.22
+ * Version: 1.0.3
  * Description: 具体植物页面
 **/
 import React, { Component } from 'react'
@@ -34,7 +34,7 @@ class PickContent extends Component {
 
     componentDidMount(){
         API.all().map(i => {
-            if (i.id.toString() === document.location.hash.split('/')[2]) {
+            if (i.id === document.location.hash.split('/')[2]) {
                 this.setState({
                     content: i.content,
                     name: i.name,
