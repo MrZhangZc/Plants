@@ -23,8 +23,8 @@ const MainRoute = () => (
     <Switch>
         <Route exact path="/introduction" component={Introduction} />
         <Route exact path="/email" component={Email} />
-        <Route path="/PRetrieval/:id" render={() => <Retrieval api={pAPI} pc="PRetrieval"/>} />
-        <Route path="/CRetrieval/:id" render={() => <Retrieval api={cAPI} pc="CRetrieval" />} />
+        <Route path="/PRetrieval/:id" render={() => <Retrieval api={pAPI} pc="PRetrieval" title="专业检索"/>} />
+        <Route path="/CRetrieval/:id" render={() => <Retrieval api={cAPI} pc="CRetrieval" title="普通检索"/>} />
         <Route exact path="/plant" component={PickerPlant} />
         <Route exact path="/zzchm" component={PickTerm} />
         <Route path="/plant/:id" component={PickContent} />
