@@ -76,7 +76,7 @@ class Retrieval extends Component {
                     <NavLink to={`${this.state.RightObj.isFinish ? `/plant/${this.state.RightObj.childrenID}` : `/${this.props.pc}/${this.state.RightObj.childrenID}`}`} className="retrieval">检索</NavLink>
                     {
                         this.state.RightObj.images.map(i => (
-                            <CircleImage imgPath={`url(${i})`} />
+                            <CircleImage toPage={`${i}`} imgPath={`url(${i})`} />
                         ))
                     }
                 </div>
