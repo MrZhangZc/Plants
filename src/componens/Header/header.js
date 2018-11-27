@@ -34,7 +34,7 @@ class Header extends Component {
                         visible={this.state.visible}
                         overlay={[
                             (<Item ><NavLink className="help" to="/introduction">简介</NavLink></Item>),
-                            (<Item ><NavLink className="help" to="/email">提出建议</NavLink></Item>)
+                            //(<Item ><NavLink className="help" to="/email">提出建议</NavLink></Item>)
                         ]}
                         align={{
                             overflow: { adjustY: 0, adjustX: 0 },

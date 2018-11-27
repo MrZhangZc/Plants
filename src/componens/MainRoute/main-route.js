@@ -22,7 +22,7 @@ import cAPI from '@date/cAPI'
 const MainRoute = () => (
     <Switch>
         <Route exact path="/introduction" component={Introduction} />
-        <Route exact path="/email" component={Email} />
+        {/* <Route exact path="/email" component={Email} /> */}
         <Route path="/PRetrieval/:id" render={() => <Retrieval api={pAPI} pc="PRetrieval" title="专业检索"/>} />
         <Route path="/CRetrieval/:id" render={() => <Retrieval api={cAPI} pc="CRetrieval" title="普通检索"/>} />
         <Route exact path="/plant" component={PickerPlant} />
