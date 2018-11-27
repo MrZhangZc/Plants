@@ -614,7 +614,7 @@ const pAPI = {
     fortysix: {
         id: '046',
         L: { childrenID: 'k32', isFinish: false, describe: '子房上位', images: [require("../public/images/PRetrieval/ke/4601.jpg")], },
-        R: { childrenID: 'k49', isFinish: false, describe: '子房下位', images: [require("../public/images/PRetrieval/ke/4611.jpg")], },
+        R: { childrenID: '330000', isFinish: true, describe: '子房下位', images: [require("../public/images/PRetrieval/ke/4611.jpg")], },
     },
     kthitytwo: {
         id: 'k32',

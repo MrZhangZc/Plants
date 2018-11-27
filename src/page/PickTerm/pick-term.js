@@ -13,7 +13,7 @@ import { createForm } from 'rc-form';
 import Header from '@components/ContentHeader/content-header'
 
 import API from '@date/plant'
-import { district } from './data';
+import { term } from '@date/picker-term-data';
 
 class Test extends React.Component {
     constructor(props) {
@@ -37,7 +37,7 @@ class Test extends React.Component {
                 <List style={{ backgroundColor: 'white' }} className="picker-list">
                     <Picker
                         visible={this.state.visible}
-                        data={district}
+                        data={term}
                         value={this.state.pickerValue}
                         onChange={v => this.setState({ pickerValue: v })}
                         onOk={() => this.setState({ visible: false })}

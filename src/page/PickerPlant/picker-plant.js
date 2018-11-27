@@ -13,7 +13,7 @@ import { createForm } from 'rc-form';
 import Header from '@components/ContentHeader/content-header'
 
 import API from '@date/plant'
-import { plant } from './data';
+import { plant } from '@date/picker-plant-data';
 
 import './picker-plant.sass'
 
