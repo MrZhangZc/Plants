@@ -21,7 +21,7 @@ class ContentHeader extends React.Component{
                 <NavBar
                     mode="dark"
                     icon={<Icon type="left" onClick={() => { history.back(-1) }} />}
-                    leftContent={<NavLink to="/" style={{ color: '#fff' }}>关闭</NavLink>}
+                    leftContent={<NavLink to="/" style={{ color: '#fff' , marginLeft: '0.6em'}}>关闭</NavLink>}
                     //onLeftClick={() => { history.back(-1) }}
                 >{this.props.title}</NavBar>
             </div>

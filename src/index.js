@@ -9,7 +9,7 @@ import PickerPlant from './page/PickerPlant/picker-plant'
 import './public/sass/base.sass'
 
 render((
-    <HashRouter>
+    <HashRouter history={history}>
         <Switch>
             <Route exact path="/" component={Home} />
             <MainRoute />

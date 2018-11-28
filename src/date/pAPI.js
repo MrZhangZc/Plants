@@ -31,6 +31,16 @@ const pAPI = {
         L: { childrenID: 's001', isFinish: false, describe: '枝条先端具顶芽，芽鳞多数；叶柄常较长；柔荑花序均下垂；苞片先端有缺裂；花具杯状花盘', images: [require("../public/images/PRetrieval/shu/020000/0200001s1.png"), require("../public/images/PRetrieval/shu/020000/0200001s2.png"), require("../public/images/PRetrieval/shu/020000/0200001s3.jpg")], },
         R: { childrenID: 's002', isFinish: false, describe: '枝条先端无顶芽，芽鳞1；叶柄常较短；柔荑花序下垂或直立；苞片全缘，无杯状花盘', images: [require("../public/images/PRetrieval/shu/020000/0200001x1.jpg"), require("../public/images/PRetrieval/shu/020000/0200001x2.png"), require("../public/images/PRetrieval/shu/020000/0200001x3.jpg")], },
     },
+    syang: {
+        id: 's001',
+        L: { childrenID: 'z001', isFinish: false, describe: '叶缘具裂片、缺刻、波状齿或全缘', images: [require("../public/images/PRetrieval/zhong/020000020100/杨属-1-上.jpg")], },
+        R: { childrenID: '020000020100020101', isFinish: true, describe: '叶缘具整齐锯齿，长枝叶为扁三角形，侧枝与主干所成夹角很小，不弯曲', images: [require("../public/images/PRetrieval/zhong/020000020100/杨属-1-下.jpg")], },
+    },
+    syang2: {
+        id: 'z001',
+        L: { childrenID: '020000020100020103', isFinish: true, describe: '花盘早落，膜质，叶两面同色，均为灰蓝色．根际萌生枝的叶和幼树叶均为全缘，或具1-2裂齿。成年树短枝的叶通常为肾状扇形，上部有不规则裂齿', images: [require("../public/images/PRetrieval/zhong/020000020100/杨属-2-上.jpg")], },
+        R: { childrenID: '020000020100020102', isFinish: true, describe: '花盘宿存，非膜质，花苞片密被长柔毛．开花不脱落，叶基部截形，长枝叶深裂，先端尖；树皮灰绿色，树冠圆柱形', images: [require("../public/images/PRetrieval/zhong/020000020100/杨属-2-下.jpg"), require("../public/images/PRetrieval/zhong/020000020100/杨属-2-下.png")], },
+    },
     five: {
         id: '005',
         L: { childrenID: 'k09', isFinish: false, describe: '子房每室含多数胚珠，蓇葖果', images: [require("../public/images/PRetrieval/ke/501.png")], },

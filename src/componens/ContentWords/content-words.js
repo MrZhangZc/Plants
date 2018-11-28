@@ -17,7 +17,7 @@ class ContentWords extends React.Component {
     render() {
         return (
             <div className="content-words">
-                {this.props.content}
+                <p className="connect">{this.props.content}</p>
             </div>
         )
     }

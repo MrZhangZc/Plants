@@ -5,7 +5,7 @@
  * Copyright 2015-present, Alipay, Inc.
  * All rights reserved.
  *       
- */am-list-extra
+ */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -3003,9 +3003,9 @@ a {
   padding-bottom: 7px;
 }
 .am-list-item .am-list-line .am-list-extra {
-  -webkit-flex-basis: 70%;
-      -ms-flex-preferred-size: 70%;
-          flex-basis: 70%;
+  -webkit-flex-basis: 36%;
+      -ms-flex-preferred-size: 36%;
+          flex-basis: 36%;
   color: #888;
   font-size: 16px;
   line-height: 1.5;
