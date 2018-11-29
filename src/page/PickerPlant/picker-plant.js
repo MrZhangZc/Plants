@@ -60,19 +60,19 @@ class Test extends Component {
 
                 <WingBlank>
                     <WhiteSpace />
-                    <Button type="primary" href={`/#/plant/${this.state.pickerValue[0]}`} className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${API.allke().map(i => {
+                    <Button type="primary" href={`index.html#/plant/${this.state.pickerValue[0]}`} className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${API.allke().map(i => {
                         let result = this.state.pickerValue[0]
                         if(i.id === result){
                             return i.name
                         }
                     }).join('')}`}</Button>
-                    <Button type="primary" href={`/#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1]}`} className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${API.allshu().map(i => {
+                    <Button type="primary" href={`index.html#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1]}`} className={`${this.state.pickerValue.length === 0 ? 'zzc' : 'hm'}`}>{`查看${API.allshu().map(i => {
                         let result = this.state.pickerValue[0] + this.state.pickerValue[1]
                         if (i.id === result) {
                             return i.name
                         }
                     }).join('')}`}</Button>
-                    <Button type="primary" className= 'hm' href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : `/#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`}`} onClick={() => {
+                    <Button type="primary" className= 'hm' href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : `index.html#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`}`} onClick={() => {
                         if (this.state.pickerValue.toString() === '') {
                             Toast.info('请至少选择一项', 1) 
                             }

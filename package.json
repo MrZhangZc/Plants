@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack -p",
+    "analyz": "webpack -p --report"
   },
   "repository": "git@github.com:MrZhangZc/Plants.git",
   "author": "zzc_imau",
@@ -39,8 +40,10 @@
     "sass": "^1.14.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.20.2",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
   }

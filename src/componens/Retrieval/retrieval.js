@@ -66,7 +66,7 @@ class Retrieval extends Component {
                     <NavLink to={`${this.state.leftObj.isFinish ? `/plant/${this.state.leftObj.childrenID}` : `/${this.props.pc}/${this.state.leftObj.childrenID}`}` } className="retrieval">检索</NavLink>
                     {
                         this.state.leftObj.images.map(i => (
-                            <CircleImage toPage= {`${i}`} imgPath={`url(${i})`} />
+                            <CircleImage toPage= {`/${i}`} imgPath={`url(${i})`} />
                         ))
                     }
                     
@@ -76,7 +76,7 @@ class Retrieval extends Component {
                     <NavLink to={`${this.state.RightObj.isFinish ? `/plant/${this.state.RightObj.childrenID}` : `/${this.props.pc}/${this.state.RightObj.childrenID}`}`} className="retrieval">检索</NavLink>
                     {
                         this.state.RightObj.images.map(i => (
-                            <CircleImage toPage={`${i}`} imgPath={`url(${i})`} />
+                            <CircleImage toPage={`/${i}`} imgPath={`url(${i})`} />
                         ))
                     }
                 </div>

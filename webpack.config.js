@@ -2,6 +2,8 @@ const path = require("path")
 const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const r = url => path.resolve(__dirname, url)
 
@@ -9,7 +11,7 @@ module.exports = {
 
     mode: 'development' ,
 
-    devtool: 'eval-source-map' ,
+    //devtool: 'eval-source-map' ,
 
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
@@ -18,7 +20,7 @@ module.exports = {
     output: {
         path: r('./dist'),
         filename: '[name].js',
-        publicPath: '/'
+        //publicPath: '/'
     },
     module: {
         rules: [
@@ -58,6 +60,10 @@ module.exports = {
             filename: './index.html',
             chunksSortMode: 'none'
         }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./dist/vendors-manifest.json')
+        }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
@@ -65,7 +71,17 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
         new ExtractTextPlugin('css/index.css'),
+        new BundleAnalyzerPlugin()
     ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    compress: false
+                }
+            })
+        ]
+    },
     devServer: {
         host: '0.0.0.0',
         disableHostCheck: true,

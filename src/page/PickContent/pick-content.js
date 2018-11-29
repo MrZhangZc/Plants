@@ -31,7 +31,7 @@ class PickContent extends Component {
                     {this.state.content}
                 </p>
                 {this.state.image.map(i => {
-                    return <div className='image' style={{ backgroundImage: `url(.${i})` }}>
+                    return <div className='image' style={{ backgroundImage: `url(${i})` }}>
                     </div>
                 })}
                 

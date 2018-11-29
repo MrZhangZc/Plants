@@ -51,7 +51,7 @@ class Test extends React.Component {
 
                 <WingBlank>
                     <WhiteSpace />
-                    <Button type="primary" className='hm' href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : `/#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`}`} onClick={() => {
+                    <Button type="primary" className='hm' href={`${this.state.pickerValue.length === 0 ? "javascript:void(0)" : `index.html#/plant/${this.state.pickerValue[0] + this.state.pickerValue[1] + this.state.pickerValue[2]}`}`} onClick={() => {
                         if (this.state.pickerValue.toString() === '') {
                             Toast.info('请至少选择一项', 1)
                         }
