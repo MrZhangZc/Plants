@@ -6,7 +6,6 @@
  * Description: picker页面(植物查询)
 **/
 import React, { Component } from 'react'
-import 'antd-mobile/dist/antd-mobile.css'
 import { Picker, List, WhiteSpace, Toast, WingBlank, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
 

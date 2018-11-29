@@ -6,10 +6,8 @@
  * Description: picker页面(形态术语)
 **/
 import React from 'react'
-import 'antd-mobile/dist/antd-mobile.css'
 import { Picker, List, WhiteSpace, Toast, WingBlank, Button } from 'antd-mobile';
 import { createForm } from 'rc-form';
-
 import Header from '@components/ContentHeader/content-header'
 
 import API from '@date/plant'

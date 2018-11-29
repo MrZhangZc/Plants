@@ -5,7 +5,7 @@ const r = url => path.resolve(__dirname, url)
 
 module.exports = {
     entry: {
-        vendors: ['react', 'antd-mobile']
+        vendors: ['react', 'antd-mobile', 'rc-form','react-router-dom']
     },
 
     output: {
